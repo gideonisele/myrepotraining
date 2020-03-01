@@ -1,0 +1,115 @@
+CREATE CENTRALIZED REPOSITORY
++++++++++++++++++++++++++++++++++++
+git init
+git remote add origin https://github.com/gideonisele/myrepotraining.git
+git pull origin master
+
+create a new file in the git folder
++++++++++++++++++++++++++++++++++++++
+sampletest1.txt
+
+
+git status
+git add .
+git commit -m "my first commit"
+
+TO push changes to github
+++++++++++++++++++++++++++++=
+ git push origin master
+
+create a file in github
+++++++++++++++++++++++++++++
+Testfile
+
+to sink the changes from github to local repository
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+git pull origin master
+
+$ ll
+total 3
+-rw-r--r-- 1 pc 197121 44 Feb 29 23:15 README.md
+-rw-r--r-- 1 pc 197121 76 Feb 29 23:26 sampletest1.txt
+-rw-r--r-- 1 pc 197121 21 Feb 29 23:30 Testfile
+
+
+GIT BRANCH
+++++++++++++++
+TO CREATE A NEW BRANCH
++++++++++++++++++++++++++=
+git branch develop
+
+to swith to the develop branch
+++++++++++++++++++++++++++++++++++=
+ git checkout develop
+
+
+ git branch secondbranch
+
+$ git branch
+* develop
+  master
+  secondbranch
+to switch between branches
+++++++++++++++++++++++++++++=
+$ git checkout master
+$ git checkout develop
+
+create new files under develop branch
++++++++++++++++++++++++++++++++++++++++++
+'GIT&GITHUB.txt'
+$ ll
+total 4
+-rw-r--r-- 1 pc 197121 229 Feb 29 23:33 'GIT&GITHUB.txt'
+-rw-r--r-- 1 pc 197121  44 Feb 29 23:15  README.md
+-rw-r--r-- 1 pc 197121  76 Feb 29 23:26  sampletest1.txt
+-rw-r--r-- 1 pc 197121  21 Feb 29 23:30  Testfile
+
+checkin to secondbranch
++++++++++++++++++++++++++++=
+git checkout secondbranch
+
+create new files in secondebranch and commit changes
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+$ git status
+On branch secondbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        GIT&GITHUB.txt
+        sampletest2.txt
+        sampletest3.txt
+
+git add .
+$ git commit -m "branch develop and Github notes"
+$ ll
+total 4
+-rw-r--r-- 1 pc 197121 229 Feb 29 23:33 'GIT&GITHUB.txt'
+-rw-r--r-- 1 pc 197121  44 Feb 29 23:15  README.md
+-rw-r--r-- 1 pc 197121  76 Feb 29 23:26  sampletest1.txt
+-rw-r--r-- 1 pc 197121   0 Feb 29 23:53  sampletest2.txt
+-rw-r--r-- 1 pc 197121   0 Feb 29 23:53  sampletest3.txt
+-rw-r--r-- 1 pc 197121  21 Feb 29 23:30  Testfile
+
+$ git checkout master
+pc@Gideon MINGW64 ~/Desktop/myrepotraining (master)
+$ ll
+total 3
+-rw-r--r-- 1 pc 197121 44 Feb 29 23:15 README.md
+-rw-r--r-- 1 pc 197121 76 Feb 29 23:26 sampletest1.txt
+-rw-r--r-- 1 pc 197121 21 Feb 29 23:30 Testfile
+
+$ ll
+total 3
+-rw-r--r-- 1 pc 197121 44 Feb 29 23:15 README.md
+-rw-r--r-- 1 pc 197121 76 Feb 29 23:26 sampletest1.txt
+-rw-r--r-- 1 pc 197121 21 Feb 29 23:30 Testfile
+
+
+The new files in secondbranch is not in develop and master branch
+ 
+
+
+
+
+
+
