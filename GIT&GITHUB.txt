@@ -1,0 +1,10 @@
+CREATE CENTRALIZED REPOSITORY
++++++++++++++++++++++++++++++++++++
+git init
+git remote add origin https://github.com/gideonisele/myrepotraining.git
+git pull origin 
+git status
+git add .
+git commit -m "my first commit"
+
+
